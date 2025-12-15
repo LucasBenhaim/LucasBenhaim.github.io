@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Page d'accueil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1349ec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101522",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-white text-3xl">hub</span>
+</div>
+<h1 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">IndusSite</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-white text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<div class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4" data-alt="Aerial view of a modern industrial complex at dusk" style='background-image: linear-gradient(rgba(16, 21, 34, 0.4) 0%, rgba(16, 21, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDP71H2BtovqYvnHkVWne7mW0bC2XLhTtNRm_FgK_W7PU5vpbXOVA9aaOe-r0f6gR9uynwN_g72RvDZRtRLROtw4sg5_JR3mB7GKl4LMcw42sp4tBi2MSOWQJdMN6RYrkL09oGUox3HgtT3ILqc4ToqZeZ7ZCFKy8IBQy4xsP0kbi0QrA1KThkcxTC6ezhQNYvJ2dg27WS6ExGvkNtOjbCaEwLAykrlF8ul9lahm0TXc2GHKp4_BLPp2T97qBCdbrF1qzIP19N1xH4");'>
+<div class="flex flex-col gap-2 text-center">
+<h2 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Transformer les Sites Industriels</h2>
+<p class="text-white/80 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">Libérer le potentiel de vos actifs industriels avec des solutions innovantes.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+<span class="truncate">Découvrir Nos Solutions</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Services Section -->
+<section>
+<h3 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8">Notre Expertise</h3>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4 flex-nowrap">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[240px] bg-white/5 p-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Abstract image representing site management" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCojtIjfyQ_VA9dtaDNtHIYw7Y1nivgJvOh1o2MhbbN2mxxyuZwHkx2PLFy1AOp2sHEIs-25q1gUIOTCqBbgLFC0YByixyufDKCjj_YrzdwvUBqj-LzN7b9A6P4VfhVcMEsLVhDYuUU4iQaxo9jH4POyKVbpOS-lswOKdOWdE5C3mAsSSEUFiUL7HtBAMg22JEJjK6uJwD0BG3zbbt8HXtVbaD-FIVhvqpUmAc78tdd1uPAjVEywzNavroFs7Zg8A2fyqSBk__ise4");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Gestion de Site</p>
+<p class="text-[#92a0c9] text-sm font-normal leading-normal">Supervision et maintenance complètes pour une performance optimale.</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[240px] bg-white/5 p-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Abstract image representing logistics optimization" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCW87LfDA1uxq-vh9Vi-5lv7zqupKlCyeuNu3r_2WEH6zBrIkQ6mgXfesAjLDihxRLnc84WXSRzISgRY3Fz54o4D28krIufUEWK3NoYEmk49NeH1oYfMBTa4aHd8Wwlui-vXaSemQu0x7KzQWFN31kcwznzuFxn2ia1HrWR9CMdfo9N9UEyKduTysyOiUNUWrVvZn6KP1RLSYXvWXl1V5ebKmMgwyyDmkh0_Ifv-fijw0_iilHnvYfFOGGhRgHjReYuLUYqiZF2qIg");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Optimisation Logistique</p>
+<p class="text-[#92a0c9] text-sm font-normal leading-normal">Rationalisation de votre chaîne d'approvisionnement pour une efficacité maximale.</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[240px] bg-white/5 p-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Abstract image representing security solutions" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXk0b1lI_QgQMF7pZC-gmpuknJPiclYoIcQqU-YjGI2MtdGd6f3SA8zXMsz9RE1AG6GnLNksqjbyN_suai96-a6ZQqWyBDNDPQnNost0mVZJY-RBl8bBfYikj0gWiYh3KMMG9ZHxD0yE2eE0jqtJIX1XUJ42kQU6JZooK4LUnbBrtjHNU-R3oA0-0L_JRHucw2xnkZtwv1q4nPSiKZAaQm1UXXqk2zh95y6ketTCkH7H8ZKa8imdSGXUhPmKdtklbzIfUVhXW__Gs");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Solutions de Sécurité</p>
+<p class="text-[#92a0c9] text-sm font-normal leading-normal">Protection de pointe pour vos actifs de valeur.</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[240px] bg-white/5 p-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Abstract image representing environmental compliance" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvdbzFX7fBWXq7-kyFMO9jWvkpA64d7QWRr9V0QjbXG8QYYdVwIbb6YBt1OjXXNKRiZLAEEruGu2rDezUmszmo3yeHATtZgNorrB3ocfUVn7X32icOrxkHSkDpbD5zOf9lElFAKEHp_BM6gF6YN_zzta3Q98mB0Awr7Q0FG0faPdhoDv7MvUkrdendHJkQ8DKnGdF18BjQK3KY0f2FK2Lap-T9TG_AKaACGQVMIUEMMvtS5xcB0ekdJFtrEWDPTGlxG9n_1uuHKAI");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Conformité Environnementale</p>
+<p class="text-[#92a0c9] text-sm font-normal leading-normal">Assurer le respect de toutes les réglementations environnementales.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition Section -->
+<section class="p-4 pt-8">
+<h3 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Pourquoi Nous Choisir?</h3>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+<div class="flex items-start gap-4 rounded-lg bg-white/5 p-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<p class="text-white font-medium">Innovation de Pointe</p>
+<p class="text-[#92a0c9] text-sm">Nous utilisons les dernières technologies pour maximiser l'efficacité et la performance.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 rounded-lg bg-white/5 p-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div>
+<p class="text-white font-medium">Sécurité Inégalée</p>
+<p class="text-[#92a0c9] text-sm">Notre priorité absolue est la sécurité de vos opérations et de votre personnel.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 rounded-lg bg-white/5 p-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-white font-medium">Efficacité Prouvée</p>
+<p class="text-[#92a0c9] text-sm">Nos solutions sont conçues pour optimiser les processus et réduire les coûts.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="p-4 pt-8 pb-12 text-center">
+<div class="flex flex-col items-center gap-4 rounded-xl bg-primary/20 p-8">
+<h3 class="text-white text-2xl font-bold leading-tight">Prêt à valoriser votre site industriel ?</h3>
+<p class="text-[#92a0c9] text-base">Contactez nos experts dès aujourd'hui pour une consultation personnalisée.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Contactez-nous</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black/20 p-6 text-center text-[#92a0c9]">
+<div class="flex flex-col gap-4">
+<div class="flex justify-center gap-6">
+<a class="text-sm hover:text-white" href="#">Politique de confidentialité</a>
+<a class="text-sm hover:text-white" href="#">Conditions d'utilisation</a>
+</div>
+<p class="text-xs">© 2024 IndusSite. Tous droits réservés.</p>
+</div>
+</footer>
+</div>
+</body></html>
