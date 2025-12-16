@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Page de contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1349ec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101522",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 justify-between sticky top-0 z-10 border-b border-gray-200/10 dark:border-gray-800/50">
+<img alt="Company Logo" class="h-8 w-8" data-alt="Abstract geometric logo in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWmSv_wetpxNOHK_mYMpdey1uDaM2BNkxeghnEe2gSR9MAP3mnuET-5eadGxBTdoy-WLOK7JDUbCXl-owlVHGWXeY20hCyqLkFfQGWDYLQN0lZh5zP_IAgyxImBW3d2Lpr6y3Ym_jc6LOTuAOdyZ4lip9vRTy7XnAC-qLR0rFuI3f7mFkrt-fZTdCjde_FfBB2a-rOhaZUHpfanfeUEQuH_xAqRBETn29QCqMxre8Qds8D4gpVO9TGAfx0PnzWi-z7H2QOFAwxq_Q"/>
+<button class="text-white flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-gray-800 dark:text-white">menu</span>
+</button>
+</header>
+<main class="flex-1 px-4">
+<!-- Headline Text -->
+<h1 class="text-gray-900 dark:text-white tracking-light text-[32px] font-bold leading-tight pt-6 pb-2">Nous Contacter</h1>
+<!-- Body Text -->
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal pb-6">N'hésitez pas à nous contacter via les informations ci-dessous ou en utilisant le formulaire.</p>
+<!-- Contact Info List -->
+<div class="space-y-3 pb-8">
+<!-- List Item: Phone -->
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-gray-200 dark:bg-[#232c48] shrink-0 size-10">
+<span class="material-symbols-outlined text-gray-800 dark:text-white">phone</span>
+</div>
+<p class="text-gray-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">+33 1 23 45 67 89</p>
+</div>
+</div>
+<!-- List Item: Email -->
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-gray-200 dark:bg-[#232c48] shrink-0 size-10">
+<span class="material-symbols-outlined text-gray-800 dark:text-white">email</span>
+</div>
+<p class="text-gray-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">contact@industrial.com</p>
+</div>
+</div>
+<!-- List Item: Address -->
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-gray-200 dark:bg-[#232c48] shrink-0 size-10">
+<span class="material-symbols-outlined text-gray-800 dark:text-white">location_on</span>
+</div>
+<p class="text-gray-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">123 Rue de l'Industrie, 75000 Paris</p>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="space-y-6 pb-10">
+<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight">Envoyez-nous un message</h2>
+<form action="#" class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="nom">Nom</label>
+<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="nom" name="nom" placeholder="Votre nom complet" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="entreprise">Entreprise</label>
+<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="entreprise" name="entreprise" placeholder="Nom de votre entreprise" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="email">Email</label>
+<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="email" name="email" placeholder="vous@exemple.com" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="telephone">Téléphone</label>
+<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78" type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="message">Message</label>
+<textarea class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="message" name="message" placeholder="Écrivez votre message ici..." rows="5"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-xl hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary" type="submit">
+            Envoyer le Message
+          </button>
+</form>
+</div>
+<!-- Social Media Section -->
+<div class="text-center pb-12">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Suivez-nous</h3>
+<div class="flex justify-center items-center gap-6">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.06 20.45H3.54V9h3.52v11.45zM5.3 7.5c-1.12 0-2.03-.9-2.03-2.02 0-1.12.9-2.02 2.03-2.02s2.03.9 2.03 2.02c0 1.12-.9 2.02-2.03 2.02zm15.15 12.95h-3.52V14.6c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.95H9.21V9h3.37v1.54h.05c.47-.88 1.6-1.8 3.32-1.8 3.56 0 4.22 2.34 4.22 5.38v6.33z"></path>
+</svg>
+</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.49-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.72-1.88-8.83-4.47-.37.63-.58 1.37-.58 2.15 0 1.49.76 2.81 1.91 3.58-.7-.02-1.36-.21-1.94-.54v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.35 0-.69-.02-1.03-.06A12.02 12.02 0 0 0 8.84 20c7.23 0 11.19-6 11.19-11.19 0-.17 0-.34-.01-.51.77-.56 1.44-1.26 1.98-2.03z"></path>
+</svg>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-gray-200/10 dark:border-gray-800/50 py-4 px-4 text-center">
+<p class="text-xs text-gray-500 dark:text-gray-400">© 2024 Industrial Inc. Tous droits réservés.</p>
+<a class="text-xs text-primary hover:underline" href="#">Politique de confidentialité</a>
+</footer>
+</div>
+</body></html>
