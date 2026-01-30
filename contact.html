@@ -87,33 +87,46 @@
 </div>
 <!-- Contact Form -->
 <div class="space-y-6 pb-10">
-<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight">Envoyez-nous un message</h2>
-<form action="#" class="space-y-4">
-<div>
-<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="nom">Nom</label>
-<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="nom" name="nom" placeholder="Votre nom complet" type="text"/>
+  <h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight">
+    Envoyez-nous un message
+  </h2>
+
+  <form id="contact-form" class="space-y-4">
+    <!-- champs -->
+    <div>
+      <label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="nom">Nom</label>
+      <input id="nom" name="nom" type="text" required
+        class="w-full bg-gray-200/50 dark:bg-gray-800/50 rounded-lg">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="email">Email</label>
+      <input id="email" name="email" type="email" required
+        class="w-full bg-gray-200/50 dark:bg-gray-800/50 rounded-lg">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required
+        class="w-full bg-gray-200/50 dark:bg-gray-800/50 rounded-lg"></textarea>
+    </div>
+
+    <!-- 🔐 CAPTCHA  -->
+    <div class="cf-turnstile"
+         data-sitekey="TA_SITE_KEY_ICI"
+         data-callback="captchaValidated">
+    </div>
+
+    <!-- bouton -->
+    <button id="submit-btn"
+      class="w-full bg-primary text-white font-bold py-3 px-4 rounded-xl opacity-50 cursor-not-allowed"
+      type="submit"
+      disabled>
+      Envoyer le Message
+    </button>
+  </form>
 </div>
-<div>
-<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="entreprise">Entreprise</label>
-<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="entreprise" name="entreprise" placeholder="Nom de votre entreprise" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="email">Email</label>
-<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="email" name="email" placeholder="vous@exemple.com" type="email"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="telephone">Téléphone</label>
-<input class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78" type="tel"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1" for="message">Message</label>
-<textarea class="w-full bg-gray-200/50 dark:bg-gray-800/50 border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="message" name="message" placeholder="Écrivez votre message ici..." rows="5"></textarea>
-</div>
-<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-xl hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary" type="submit">
-            Envoyer le Message
-          </button>
-</form>
-</div>
+
 <!-- Social Media Section -->
 <div class="text-center pb-12">
 <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Suivez-nous</h3>
@@ -138,3 +151,24 @@
 </footer>
 </div>
 </body></html>
+
+<script>
+  let captchaOk = false;
+
+  function captchaValidated() {
+    captchaOk = true;
+    const btn = document.getElementById("submit-btn");
+    btn.disabled = false;
+    btn.classList.remove("opacity-50", "cursor-not-allowed");
+  }
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    if (!captchaOk) {
+      e.preventDefault();
+      alert("Veuillez valider le CAPTCHA avant d’envoyer le message.");
+    } else {
+      e.preventDefault();
+      alert("Message prêt à être envoyé ✅ (backend à connecter)");
+    }
+  });
+</script>
